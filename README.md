@@ -1,4 +1,4 @@
-# chatui
+# Chatui
 
-A new Flutter project.
+A Simple Chat App UI Made using flutter.
 
