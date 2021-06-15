@@ -1,3 +1,4 @@
+import 'package:chatui/Models/UserModel.dart';
 import "package:flutter/material.dart";
 
 class ChatPage extends StatefulWidget {
@@ -8,6 +9,49 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
+  List<ChatUsers> chatUsers = [
+    ChatUsers(
+        name: "PARANAVI TAMBE",
+        messageText: "Thank you for your support",
+        imageURl: "assets/23.png",
+        time: "30 Mins ago"),
+    ChatUsers(
+        name: "DHANVI",
+        messageText: "Hey Kamiya!Truly inspired ...",
+        imageURl: "assets/3.png",
+        time: "12:01 PM"),
+    ChatUsers(
+        name: "PRANAV NAIR",
+        messageText: "Hello Ma'am",
+        imageURl: "assets/5.png",
+        time: "11:21 AM"),
+    ChatUsers(
+        name: "RACHEL GREEN",
+        messageText: "Your Ideas actually did ...",
+        imageURl: "assets/5.png",
+        time: "10:05 AM"),
+    ChatUsers(
+        name: "BHOOPALAN P",
+        messageText: "THANK YOU! This means...",
+        imageURl: "assets/23.png",
+        time: "Yesterday"),
+    ChatUsers(
+        name: "PRANAV NAIR",
+        messageText: "That is some good advice...",
+        imageURl: "assets/20.png",
+        time: "Yesterday"),
+    ChatUsers(
+        name: "RACHEL GREEN",
+        messageText: "In retrospect, that segment",
+        imageURl: "assets/21.png",
+        time: "2 Days Ago"),
+    ChatUsers(
+        name: "BHOOPALAN P",
+        messageText: "You are very very goog at...",
+        imageURl: "assets/19.png",
+        time: "2 Days Ago")
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
