@@ -130,7 +130,7 @@ class _ChatPageState extends State<ChatPage> {
                   return ConversationList(
                     name: chatUsers[i].name,
                     messageText: chatUsers[i].messageText,
-                    imageUrl: chatUsers[i].imageURl,
+                    imageUrl: "https://randomuser.me/api/portraits/men/$i.jpg",
                     time: chatUsers[i].time,
                     isMRead: (i == 0 || i == 3) ? true : false,
                   );

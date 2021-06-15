@@ -36,7 +36,7 @@ class _ConversationListState extends State<ConversationList> {
                 child: Row(
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage(widget.imageUrl),
+                  backgroundImage: NetworkImage(widget.imageUrl),
                   maxRadius: 30,
                 ),
                 SizedBox(
