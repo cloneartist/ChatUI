@@ -24,9 +24,7 @@ class _ConversationListState extends State<ConversationList> {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        padding: EdgeInsets.only(
-          left: 16,
-        ),
+        padding: EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
         child: Row(
           children: [
             Expanded(
