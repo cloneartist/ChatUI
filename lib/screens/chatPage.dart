@@ -75,23 +75,23 @@ class _ChatPageState extends State<ChatPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.pink[50]),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.add,
-                        color: Colors.pink,
-                        size: 20,
-                      ),
-                      SizedBox(
-                        width: 2,
-                      ),
-                      Text(
-                        "Add New",
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
+                  // child: Row(
+                  //   children: [
+                  //     Icon(
+                  //       Icons.add,
+                  //       color: Colors.pink,
+                  //       size: 20,
+                  //     ),
+                  //     SizedBox(
+                  //       width: 2,
+                  //     ),
+                  //     Text(
+                  //       "Add New",
+                  //       style: TextStyle(
+                  //           fontSize: 14, fontWeight: FontWeight.bold),
+                  //     )
+                  //   ],
+                  // ),
                 )
               ],
             ),
