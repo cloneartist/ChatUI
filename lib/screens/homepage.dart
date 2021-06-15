@@ -1,3 +1,4 @@
+import 'package:chatui/screens/chatPage.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,11 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Center(
-          child: Text("Chat"),
-        ),
-      ),
+      body: ChatPage(),
     );
   }
 }

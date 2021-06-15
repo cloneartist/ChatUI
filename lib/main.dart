@@ -1,3 +1,4 @@
+import 'package:chatui/screens/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,18 +6,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: Container(),
+      home: HomePage(),
     );
   }
 }
-
