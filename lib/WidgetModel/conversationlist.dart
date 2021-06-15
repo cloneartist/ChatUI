@@ -70,12 +70,28 @@ class _ConversationListState extends State<ConversationList> {
                 ))
               ],
             )),
-            Text(
-              widget.time,
-              style: TextStyle(
-                  fontSize: 12,
-                  fontWeight:
-                      widget.isMRead ? FontWeight.bold : FontWeight.normal),
+            Column(
+              children: [
+                Text(
+                  widget.time,
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight:
+                          widget.isMRead ? FontWeight.bold : FontWeight.normal),
+                ),
+                SizedBox(height: 10),
+                widget.isMRead
+                    ? Container(
+                        // padding: EdgeInsets.only(top: 10),
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade200,
+                            // borderRadius: BorderRadius.all(Radius.circular(20)),
+                            shape: BoxShape.circle),
+                        child: Center(child: Text("1")))
+                    : Container()
+              ],
             )
           ],
         ),

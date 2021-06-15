@@ -65,7 +65,7 @@ class _ChatPageState extends State<ChatPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Conversations",
+                  "Youchat",
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
                 Container(
