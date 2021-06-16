@@ -97,18 +97,48 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
       ),
       body: Stack(
         children: [
-          ListView.builder(
-            itemCount: messages.length,
-            shrinkWrap: true,
-            padding: EdgeInsets.only(top: 10, bottom: 10),
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, i) {
-              return Container(
-                padding:
-                    EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
-                child: Text(messages[i].messageContent),
-              );
-            },
+          Container(
+            padding: EdgeInsets.only(bottom: 60),
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: ListView.builder(
+                itemCount: messages.length,
+                shrinkWrap: true,
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, i) {
+                  return Container(
+                      padding: EdgeInsets.only(
+                          left: 16, right: 16, top: 10, bottom: 10),
+                      child: Align(
+                        alignment: messages[i].messageType == "reciever"
+                            ? Alignment.topLeft
+                            : Alignment.topRight,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: messages[i].messageType == "reciever"
+                                ? BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(20),
+                                    bottomRight: Radius.circular(20))
+                                : BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(20),
+                                    bottomLeft: Radius.circular(20)),
+                            color: (messages[i].messageType == "reciever"
+                                ? Colors.grey.shade200
+                                : Colors.blue[200]),
+                          ),
+                          padding: EdgeInsets.all(16),
+                          child: Text(
+                            messages[i].messageContent,
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ),
+                      ));
+                },
+              ),
+            ),
           ),
           Align(
             alignment: Alignment.bottomLeft,
