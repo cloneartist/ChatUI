@@ -97,6 +97,19 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
       ),
       body: Stack(
         children: [
+          ListView.builder(
+            itemCount: messages.length,
+            shrinkWrap: true,
+            padding: EdgeInsets.only(top: 10, bottom: 10),
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, i) {
+              return Container(
+                padding:
+                    EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
+                child: Text(messages[i].messageContent),
+              );
+            },
+          ),
           Align(
             alignment: Alignment.bottomLeft,
             child: Container(
