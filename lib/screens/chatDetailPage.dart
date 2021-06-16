@@ -1,3 +1,4 @@
+import 'package:chatui/Models/ChatMessageModel.dart';
 import 'package:flutter/material.dart';
 
 class ChatDetailPage extends StatefulWidget {
@@ -8,6 +9,38 @@ class ChatDetailPage extends StatefulWidget {
 }
 
 class _ChatDetailPageState extends State<ChatDetailPage> {
+  List<ChatMessage> messages = [
+    ChatMessage(
+        messageContent: "Hello Mam! Hope you are doing well",
+        messageType: "reciever"),
+    ChatMessage(
+        messageContent: "Hi Parnavi!Yes I am Happy to connect!",
+        messageType: "sender"),
+    ChatMessage(
+        messageContent: "Glad to be part of your community as well",
+        messageType: "reciever"),
+    ChatMessage(
+        messageContent:
+            "Wanted to gather your thoughts regarding what I have been working on",
+        messageType: "reciever"),
+    ChatMessage(
+        messageContent:
+            "When do you believe will be the best possible way to connect",
+        messageType: "reciever"),
+    ChatMessage(
+        messageContent: "Great!Thanks for reaching out!",
+        messageType: "sender"),
+    ChatMessage(
+        messageContent: "I have added some new consultation slots today.",
+        messageType: "sender"),
+    ChatMessage(
+        messageContent: "Use them to schedule as per convenience",
+        messageType: "sender"),
+    ChatMessage(
+        messageContent: "Thank you for supporting", messageType: "reciever"),
+    ChatMessage(
+        messageContent: "Looking forward to our call", messageType: "sender"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
